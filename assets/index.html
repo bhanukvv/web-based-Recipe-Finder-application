@@ -3,37 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
+    <title>Online Recipe Finder</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-
 <body>
-    <header>
-        <div id="stars"></div>
-            <div class="center-navbar">
-                <a href=""> Home</a>
-                 <a href="">Search</a>
-                 <a href="">About </a>
-             </div>
-         </div>
-
-        <div class="Text">
-            <h1>Recipe Finder</h1>
-            <p>Discover new dishes... explore fresh ingredients and enjoy a seamless recipe search experience.
-             Our recipe finder helps you turn everyday ingredients into delicious meals with ease, making cooking more exciting, creative, and stress free</p>
-            <a href="" class="btn"> Search Now </a>
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-30 transition-all duration-300 navbar-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="text-white text-2xl font-bold rounded-lg p-2 transition duration-300 hover:text-yellow-400">
+                        <span class="text-yellow-400">R</span>ecipe
+                    </a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Nav Links -->
+                    <div class="block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#hero-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                            <a href="#content-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Search</a>
+                            <a href="#content-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="Burger img">
-            <img src="media/front-view-burger-with-french-fries.jpg"alt=""> 
-        </div>
+    </nav>
+<!-- Hero Section (Full viewport height) -->
+    <section id="hero-section" class="h-screen flex items-center justify-center bg-black relative overflow-hidden">
         
+        <!-- Yellow Spray Paint Splatter Effect Container -->
+        <div id="splatter-container">
+            <!-- Splatter particles will be generated here by JavaScript -->
+        </div>
 
-    </header>
+        <div class="max-w-6xl mx-auto p-8 h-full flex flex-col md:flex-row items-center justify-center z-10">
+
+            <!-- Left Side: Text Content -->
+            <div class="w-full md:w-1/2 p-4 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    <span class="text-yellow-400">O</span>nline Recipe <br class="hidden sm:inline"> Finder
+                </h1>
+                <p class="text-gray-300 text-lg md:text-x1 max-w-lg mx-auto md:mx-0">
+                    Discover your next favorite meal with our vast collection of recipes. From quick weeknight dinners to gourmet creations, culinary inspiration is just a click away. Find, save, and share your passion for food.
+                </p>
+               <button id="search-button" class="mt-20 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                 Start Search 
+            </button>
+            </div>
+
+            <!-- Right Side: Image Content (FIXED STRUCTURE FOR CENTERING) -->
+            <div class="w-full md:w-1/2 p-4 flex justify-center items-center relative mt- md:-mt-32">
+                <!-- Image Container with fixed responsive dimensions -->
+                <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
+                    <img 
+                        src="media/main image .png" 
+                        alt="Delicious food image" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/500x500/1F2937/FACC15?text=Recipe+Finder';"
+                    >
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content Section (To enable scrolling) -->
+    <section id="content-section" class="min-h-screen bg-white py-20 px-4">
+       
+            <!-- Padding for scrollability -->
+            <div class="h-96"></div>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/app.js"></script>
 </body>
-
 </html>

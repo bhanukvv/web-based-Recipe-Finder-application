@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    /* Changed to match the black body background color from your provided CSS */
+    background-color: #0a0a0a; 
+    overflow-y: scroll;
+}
+
+/* Nav bar background blur for transparency effect */
+.navbar-blur {
+    background: rgba(0, 0, 0, 0.08); /* light transparent layer */
+    backdrop-filter: blur(24px); 
+}
+.navbar-solid {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+}
+
+
+/* Custom styles for the dynamic yellow spray paint splatter effect */
+#splatter-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 60vh; /* Adjust height relative to viewport */
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+    /* Ensure the entire container scales and moves together */
+    transform-origin: bottom center;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease-in-out;
+}
+
+/* Individual splatter particle styles */
+.splatter-particle {
+    position: absolute;
+    background-color: #FACC15;
+    border-radius: 70%;
+    pointer-events: none;
+}
+
+/* Ensuring the second section is tall enough to allow scrolling */
+#content-section {
+    min-height: 120vh;
+    padding-top: 5rem;
+}
