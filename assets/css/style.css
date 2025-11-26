@@ -45,6 +45,63 @@ body {
     min-height: 120vh;
     padding-top: 5rem;
      font-family: 'Inter', sans-serif;
-    background-color: #fffdfd; 
+    background-color: #000000; 
     overflow-y: scroll;
+
+
+    .recipe-finder-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform-origin: top center;
+    margin-top: -350px;
+}
+
+/* Form layout same as before */
+.recipe-finder-container form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Search Input */
+#Search-input {
+    width: 350px;
+    padding: 12px 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+#Search-input:focus {
+    border-color: #FACC15;
+    box-shadow: 0 0 6px rgba(250, 204, 21, 0.6);
+}
+
+/* Search Button */
+#search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FACC15;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#search-button:hover {
+    transform: scale(1.05);
+}
+
+.shrink-roll {
+    transform: scale(0.2) rotateX(60deg);
+    opacity: 0;
+}
+
+/* Normal size & visible */
+.expand-open {
+    transform: scale(1) rotateX(0deg);
+    opacity: 1;
+}
 }

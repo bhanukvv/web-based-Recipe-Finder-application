@@ -99,3 +99,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+const searchBarContainer = document.querySelector('.recipe-finder-container');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    // SCROLL DOWN → Expand & Show (grow bigger)
+    if (currentScroll > lastScrollPosition && currentScroll > 100) {
+        searchBarContainer.classList.remove("shrink-roll");
+        searchBarContainer.classList.add("expand-open");
+    } 
+    // SCROLL UP → Shrink & Disappear (make smaller)
+    else {
+        searchBarContainer.classList.remove("expand-open");
+        searchBarContainer.classList.add("shrink-roll");
+    }
+
+    lastScrollPosition = currentScroll;
+});
