@@ -55,7 +55,7 @@ body {
     align-items: center;
     transition: transform 0.6s ease, opacity 0.6s ease;
     transform-origin: top center;
-    margin-top: -350px;
+    margin-top: -250px;
 }
 
 /* Form layout same as before */
