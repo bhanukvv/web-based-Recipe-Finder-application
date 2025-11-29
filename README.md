@@ -1,6 +1,7 @@
 #  Recipe Finder – Multi-API Food & Drink Search App
 
-Recipe Finder – Multi-API Food & Drink Search App
+
+
 A modern, interactive web application that lets users search for meals, cocktails, and grocery products using **three different public APIs**. Includes category browsing, detailed recipe modals, animations, and scroll-based UI effects.
 
 
