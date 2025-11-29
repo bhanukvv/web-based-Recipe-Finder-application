@@ -1,116 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover delicious recipes from around the world with our Recipe Finder. Search by name or explore random recipes.">
     <title>Online Recipe Finder</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Link to external CSS file -->
+
+    <!-- Link CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav id="navbar" class="fixed top-0 left-0 w-full z-30 transition-all duration-300 navbar-blur">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
+                
+
                 <div class="flex items-center">
-                    <a href="#" class="text-white text-2xl font-bold rounded-lg p-2 transition duration-300 hover:text-yellow-400">
+                    <a href="#"
+                        class="text-white text-2xl font-bold rounded-lg p-2 transition duration-300 hover:text-yellow-400">
                         <span class="text-yellow-400">R</span>ecipe finder
                     </a>
                 </div>
-                
+
                 <div class="flex items-center space-x-4">
                     <!-- Nav Links -->
                     <div class="block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#hero-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
-                            <a href="#content-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Search</a>
-                            <a href="#content-section" class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About Us</a>
+                            <a href="#hero-section"
+                                class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                            <a href="#content-section"
+                                class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Search</a>
+                            <a href="#about-section"
+                                class="text-white hover:bg-white hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About
+                                Us</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-<!-- Hero Section (Full viewport height) -->
+
+    <!-- Hero Section  -->
     <section id="hero-section" class="h-screen flex items-center justify-center bg-black relative overflow-hidden">
-        
-        <!-- Yellow Spray Paint Splatter Effect Container -->
+
+        <!-- Yellow Spray Paint Splatter  -->
         <div id="splatter-container">
-            <!-- Splatter particles will be generated here by JavaScript -->
+            
         </div>
 
         <div class="max-w-6xl mx-auto p-8 h-full flex flex-col md:flex-row items-center justify-center z-10">
 
-            <!-- Left Side: Text Content -->
+            <!-- Text Content -->
             <div class="w-full md:w-1/2 p-4 text-center md:text-left">
                 <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
                     <span class="text-yellow-400">O</span>nline Recipe <br class="hidden sm:inline"> Finder
                 </h1>
                 <p class="text-gray-300 text-lg md:text-x1 max-w-lg mx-auto md:mx-0">
-                    Discover your next favorite meal with our vast collection of recipes. From quick weeknight dinners to gourmet creations, culinary inspiration is just a click away. Find, save, and share your passion for food.
+                    Discover your next favorite meal with our vast collection of recipes. From quick weeknight dinners
+                    to gourmet creations, culinary inspiration is just a click away.....<br>
+                    Find, save, and share your passion
+                    for food !
                 </p>
-               <button id="search-button" class="mt-20 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
-                 Start Search 
-            </button>
+                <button id="hero-search-button"
+                    class="mt-20 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                    Start Search
+                </button>
             </div>
 
-            <!-- Right Side: Image Content (FIXED STRUCTURE FOR CENTERING) -->
+            <!--  Image Content -->
             <div class="w-full md:w-1/2 p-4 flex justify-center items-center relative mt- md:-mt-32">
-                <!-- Image Container with fixed responsive dimensions -->
-                <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-                    <img 
-                        src="media/main image .png" 
-                        alt="Delicious food image" 
-                        class="w-full h-full object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/500x500/1F2937/FACC15?text=Recipe+Finder';"
-                    >
+               
+                <div
+                    class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
+                    <img src="media/main image .png" alt="Delicious food image" class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/500x500/1F2937/FACC15?text=Recipe+Finder';">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Content Section (To enable scrolling) -->
+            <!-- Content Section  -->
     <section id="content-section" class="min-h-screen bg-white py-20 px-4">
-            <!-- Padding for scrollability -->
-            <div class="h-96"></div>
-        </div>
+        
+        <div class="h-96"></div>
+
         <div class="recipe-finder-container">
-         <!--Search bar-->        
-            <form>
-                <input
-                type="Text"
-                id="Search-input"
-                placeholder="Search by Name"
-                required
-                />
-        <!--Search button -->
-            <button type="submit" id="search-button">Search</button>
+            <!--Search bar-->
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search by Recipe Name (e.g., Pizza, Pasta, Chicken)"
+                    required />
+                <!--Search button -->
+                <button type="submit" id="search-btn">Search</button>
             </form>
         </div>
 
-        <!--message bar and search result grid -->
-        <div class ="message" id="message-area"></div>
-        <div class ="Result-grid" id="results-grid">
-                <div class="recipe-item">
-                 <img src="media/pizza.jpg"alt="pizza"/>
-                <h3>Pizza</h3>
-                </div>        
+        <!-- Category Showcase Section -->
+        <div class="category-showcase-container">
+            <h2 class="showcase-title">Explore Recipes by Category</h2>
+
+            <!-- Category Navigation Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="Breakfast">🍳 Breakfast</button>
+                <button class="category-tab" data-category="Seafood">🍤 Lunch</button>
+                <button class="category-tab" data-category="Dessert">🍰 Dinner</button>
+                <button class="category-tab" data-category="Vegetarian">🥗 Healthy</button>
+                <button class="category-tab" data-category="Starter">🍹 Drinks</button>
+                <button class="category-tab" data-category="Side">🍿 Snacks</button>
+            </div>
+
+            <!-- Category Recipe Cards Container -->
+            <div class="category-recipes-scroll" id="category-recipes-container">
+               
+            </div>
         </div>
-        <div class="model-container hidden"id="recipe-model"></div>
-            <div class="model-content">
-                <button id="model-close-btn" class="modal-close-btn">+</button>
+
+        <!--message bar and search result grid -->
+        <div class="message" id="message-area"></div>
+        <div class="results-grid" id="results-grid">
+            
+        </div>
+
+        <!-- Recipe Details Modal -->
+        <div class="modal-container hidden" id="recipe-modal">
+            <div class="modal-content">
+                <button id="modal-close-btn" class="modal-close-btn">+</button>
                 <div id="recipe-details-content">
-                    <!--recipe details -->
-                    <h2>Pizza</h2>
+                    
                 </div>
             </div>
+        </div>
     </section>
 
-    <!-- Link to external JavaScript file -->
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+        <div class="about-container">
+            <div class="plate-animation-wrapper">
+                <div class="plate-container" id="rotating-plate">
+                    <svg class="plate-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                       
+                        <circle cx="100" cy="100" r="95" fill="#f5f5f5" stroke="#ddd" stroke-width="2" />
+                        <circle cx="100" cy="100" r="85" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" />
+                        <circle cx="100" cy="100" r="75" fill="none" stroke="#f0f0f0" stroke-width="1" />
+                        <circle cx="100" cy="100" r="65" fill="none" stroke="#f5f5f5" stroke-width="0.5" />
+                        <text x="100" y="115" font-size="50" text-anchor="middle" fill="#FACC15">🍽️</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h2 class="about-title">About Recipe Finder</h2>
+                <p class="about-description">
+                    Welcome to <span class="highlight">Recipe Finder</span>, your ultimate culinary companion
+                    Discover thousands of delicious recipes from around the world, ranging from hearty breakfasts
+                    to elegant dinners, refreshing drinks to satisfying snacks. Whether you re a seasoned chef
+                    or a cooking beginner our extensive collection has something for everyone.
+                </p>
+                <p class="about-description">
+                    Search by name explore by category and find step by step instructions with ingredients
+                    and video tutorials Let your culinary journey begin with Recipe Finder – where every meal
+                    is an adventure.... 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link  JavaScript file -->
     <script src="js/app.js"></script>
 </body>
+
 </html>
